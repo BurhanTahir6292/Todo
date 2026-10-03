@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #082014 0%, #0f3322 40%, #4a4007 75%, #d4a017 100%);
+  background-attachment: fixed;
+  color: #e2f1e8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#root > div {
+  width: 100%;
+  max-width: 460px;
+  background-color: #112d1f;
+  border: 1px solid #1c4a33;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #f0fdf4;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  background-color: #07170f;
+  border: 1px solid #1c4a33;
+  border-radius: 8px;
+  color: #f0fdf4;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input[type="text"]::placeholder {
+  color: #1b64b8;
+}
+
+form input[type="text"]:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+
+form button[type="submit"] {
+  padding: 12px 18px;
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #059669;
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #1c4a33;
+  border-radius: 4px;
+}
+
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #153827;
+  border: 1px solid #20533b;
+  border-radius: 8px;
+  gap: 12px;
+  transition: background-color 0.2s;
+}
+
+ul li:hover {
+  background-color: #1a4531;
+}
+
+ul li span {
+  flex: 1;
+  word-break: break-word;
+  font-size: 0.95rem;
+  color: #e2f1e8;
+}
+
+ul li button {
+  padding: 6px 12px;
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+ul li button:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #root > div {
+    padding: 24px 18px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+  }
+}
